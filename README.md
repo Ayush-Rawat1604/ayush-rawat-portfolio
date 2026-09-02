@@ -16,3 +16,7 @@ Professional static portfolio website for GitHub Pages.
 
 ## Personalize
 Replace project placeholders with your real SolidWorks/CATIA images and drawings as projects are completed. Add a PDF named `Ayush_Rawat_Resume.pdf` to the root and add a Resume button if desired.
+
+
+## Added project media
+The V6 Engine project page is in `v6-engine.html` with images and the supplied motion-study video in `assets/`.
