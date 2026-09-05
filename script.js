@@ -1,3 +1,33 @@
-const menu=document.querySelector('.menu');
-const nav=document.querySelector('#nav-links');
-if(menu){menu.addEventListener('click',()=>{nav.style.display=nav.style.display==='flex'?'none':'flex';nav.style.flexDirection='column';nav.style.position='absolute';nav.style.top='68px';nav.style.right='22px';nav.style.background='#0d1b2e';nav.style.padding='16px 20px';nav.style.border='1px solid #203851';nav.style.borderRadius='12px';});}
+const menu = document.querySelector('.menu');
+const nav = document.querySelector('#nav-links');
+
+if (menu && nav) {
+  menu.addEventListener('click', () => {
+    const open = nav.classList.toggle('open');
+    menu.setAttribute('aria-expanded', String(open));
+  });
+
+  nav.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      nav.classList.remove('open');
+      menu.setAttribute('aria-expanded', 'false');
+    });
+  });
+}
+
+const sections = document.querySelectorAll('main section[id]');
+const navLinks = document.querySelectorAll('#nav-links a');
+
+const setActiveLink = () => {
+  let current = 'home';
+  sections.forEach(section => {
+    const top = section.getBoundingClientRect().top;
+    if (top <= 130) current = section.id;
+  });
+  navLinks.forEach(link => {
+    link.classList.toggle('active', link.getAttribute('href') === `#${current}`);
+  });
+};
+
+window.addEventListener('scroll', setActiveLink, { passive: true });
+setActiveLink();
