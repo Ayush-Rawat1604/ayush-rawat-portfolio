@@ -3,9 +3,14 @@
 Professional static portfolio website for GitHub Pages.
 
 ## Files
-- `index.html` — portfolio content
+- `index.html` — portfolio homepage
 - `style.css` — responsive design
 - `script.js` — mobile navigation
+- `v6-engine.html` — dedicated V6 car engine assembly project
+- `cad-practice.html` — dedicated CAD part-design practice collection
+
+## Portfolio structure
+The V6 engine assembly is presented as the featured assembly project, while individual SolidWorks part-design practice is separated into its own portfolio section. This keeps assembly-level and component-level CAD work easy for recruiters to review.
 
 ## Publish with GitHub Pages
 1. Upload these files to the root of `Ayush-Rawat1604/ayush-rawat-portfolio`.
@@ -15,8 +20,4 @@ Professional static portfolio website for GitHub Pages.
 5. GitHub will provide the live Pages URL.
 
 ## Personalize
-Replace project placeholders with your real SolidWorks/CATIA images and drawings as projects are completed. Add a PDF named `Ayush_Rawat_Resume.pdf` to the root and add a Resume button if desired.
-
-
-## Added project media
-The V6 Engine project page is in `v6-engine.html` with images and the supplied motion-study video in `assets/`.
+Add the original SolidWorks screenshots, drawings and CAD-file exports to the corresponding project sections as they are prepared.
